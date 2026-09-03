@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Forex Analyzer — تحليل فوركس حقيقي</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">Forex Analyzer</div>
+      <div id="statusPill" class="status-pill">جاري الاتصال...</div>
+    </header>
+
+    <div class="controls">
+      <select id="symbolSelect" class="select"></select>
+      <div id="timeframeRow" class="pill-row"></div>
+    </div>
+
+    <div id="errorBanner" class="error-banner" hidden></div>
+
+    <div class="main">
+      <div class="chart-card">
+        <div class="chart-top">
+          <span id="symbolLabel" class="mono"></span>
+          <span id="priceLabel" class="mono price"></span>
+        </div>
+        <div id="chart" class="chart"></div>
+      </div>
+
+      <div class="signal-card" id="signalCard">
+        <div id="signalBadge" class="signal-badge">⚪ WAIT</div>
+        <div id="signalReason" class="signal-reason">بانتظار البيانات...</div>
+      </div>
+
+      <div class="indicators-card" id="indicatorsCard"></div>
+
+      <p class="disclaimer">
+        هذه الإشارات أداة تحليل فني (EMA/RSI/MACD/ATR) وليست توصية استثمارية ولا ضمانًا للربح.
+        التداول في الفوركس ينطوي على مخاطر خسارة كبيرة.
+      </p>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
